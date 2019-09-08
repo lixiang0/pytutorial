@@ -1,3 +1,8 @@
+## python口袋书
+
+---
+
+
 #### python map()方法
 
 - 语法：
@@ -15,6 +20,8 @@
 map(lambda x : x*x , [1,2,3,4,5])
 #[1,4,9,16,25]
 ```
+
+---
 
 #### python 中的self
 
@@ -34,6 +41,9 @@ class one_class:
 ne_class().show()
 #we use other_self replace of self
 ```
+
+---
+
 
 #### python ```__import__()```
 
@@ -55,6 +65,9 @@ a=np.array([1,2,3,4,5,6])
 print(type(a))
 #<class 'numpy.ndarray'>
 ```
+
+---
+
 
 #### python hex() oct() bin()
 
@@ -78,6 +91,9 @@ print('___',type(bin(110)))
 #___ <class 'str'>
 ```
 
+---
+
+
 #### python dir()
 python内置方法，以列表方式返回对象的属性和方法
 - 语法：
@@ -93,6 +109,9 @@ dir()
 #
 ['In','Out','_','_1','__','___','__builtin__','__builtins__','__doc__', '__loader__', '__name__', '__package__', '__spec__', '_dh', '_i', '_i1', '_i2', '_ih', '_ii', '_iii', '_oh', 'exit','get_ipython', 'quit','test']
 ```
+
+---
+
 #### 一行代码从字符串中读取数字
 
 ```
@@ -106,6 +125,9 @@ list(map(int,re.findall('\d+',test_string)))
 #[2019, 9, 6, 3]
 ```
 
+---
+
+
 #### 一行代码从字符串中抽取数字，并找出最大值
 
 ```
@@ -113,6 +135,9 @@ test_string = "2019 年 9 月 6 号 下午 3点 。"
 max([int(i) for i in test_string.split() if i.isdigit()])
 #2019
 ```
+
+---
+
 
 #### 从字符串去除标点符号
 
@@ -124,3 +149,5 @@ res = re.sub('['+string.punctuation+']', '', test_string).split()
  #
 ['Geeksforgeeks', 'is', 'best', 'Computer', 'Science', 'Portal']
 ```
+
+---
