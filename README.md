@@ -156,9 +156,22 @@ res = re.sub('['+string.punctuation+']', '', test_string).split()
 ```
 a=[1,2,3,4]
 b=a
-#a+=[5,6,7,8]
-#a,b=[1,2,3,4,5,6,7,8]
-#a=a+[5,6,7,8]
-#a=[1,2,3,4,5,6,7,8] b=[1,2,3,4]
+#操作一：a+=[5,6,7,8]
+##这里a,b=[1,2,3,4,5,6,7,8]
+##操作二：a=a+[5,6,7,8]
+#这里a=[1,2,3,4,5,6,7,8] b=[1,2,3,4]
 ```
 解析：+=操作是直接在a上面进行操作，而a=a+[5,6,7,8]是新建了另一个a对象，而b依然指的是之前的[1,2,3,4]对象
+
+---
+
+#### dir()操作
+
+该操作返回的是模块所有的方法和属性，示例：
+```
+d={}
+
+print(dir(d))
+
+#['__class__', '__contains__', '__delattr__', '__delitem__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__gt__', '__hash__', '__init__', '__iter__', '__le__', '__len__', '__lt__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__setitem__', '__sizeof__', '__str__', '__subclasshook__', 'clear', 'copy', 'fromkeys', 'get', 'items', 'keys', 'pop', 'popitem', 'setdefault', 'update', 'values']
+```
