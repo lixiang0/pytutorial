@@ -6,4 +6,9 @@
 
 
 #### What’s the difference between nn.ReLU() and nn.ReLU(inplace=True)?
+
 inplace=True means that it will modify the input directly, without allocating any additional output. It can sometimes slightly decrease the memory usage, but may not always be a valid operation (because the original input is destroyed). However, if you don’t see an error, it means that your use case is valid.
+
+#### UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead.
+
+I fixed this warning by changing objects of type ByteTensor to BoolTensor instead. This was the source of the warnings for me.
